@@ -9,7 +9,15 @@ public class SearchResultsPage {
     WebElement searchResultTextToys;
 
 
-    public boolean isToysTxtDisplayed(){
+    @FindBy(xpath ="//*[@id='-title']/span")
+    WebElement popularShoppingIdea;
+
+
+    public boolean isToysTxtDisplayed() {
         return searchResultTextToys.isDisplayed();
+    }
+    public String getPopularShoppingIdea(){
+        return popularShoppingIdea.getText();
+
     }
 }

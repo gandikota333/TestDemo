@@ -17,7 +17,7 @@ public class BaseTest {
     private static ChromeDriver driver;
     static HomePage homePageObj;
     static LoginPage loginPageObj;
-
+    static  SearchResultsPage searchResultsPageObj;
 
 
     @BeforeClass
@@ -29,6 +29,7 @@ public class BaseTest {
         //obj initialise
         homePageObj = PageFactory.initElements(driver, HomePage.class);
         loginPageObj = PageFactory.initElements(driver, LoginPage.class);
+        searchResultsPageObj = PageFactory.initElements(driver, SearchResultsPage.class);
         driver.get("https://www.amazon.in/");
         Assert.assertTrue(homePageObj.isLogoDisplayed());
     }

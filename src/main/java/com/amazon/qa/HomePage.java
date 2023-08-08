@@ -23,6 +23,12 @@ public class HomePage {
     @FindBy(xpath = "//*[@id=\"nav-logo-sprites\"]")
     WebElement logoIcon;
 
+
+    @FindBy(xpath = "//*[@id='nav-search-submit-button']")
+    WebElement searchBtn;
+
+
+
     @FindBy(xpath = "//*[@id=\"nav-flyout-ya-signin\"]/a/span")
     private WebElement signinbtn;
 
@@ -43,6 +49,11 @@ public class HomePage {
     public void clicksearchInputBox() {
         searchInputBox.click();
     }
+
+    public void clicksearchBtn(){
+        searchBtn.click();
+    }
+
 
     public boolean isLogoDisplayed() {
         return wait.until(ExpectedConditions.visibilityOf(logoIcon)).isDisplayed();
